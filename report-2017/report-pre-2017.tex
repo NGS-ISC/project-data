@@ -51,16 +51,33 @@
 \newcommand\bottomrule{\noindent\vhrulefill{2pt}}
 \newcommand\midrule{\noindent\vhrulefill{2pt}}
 
+\newtotcounter{captionsnum}
+\def\oldcaption{} \let\oldcaption=\caption
+\def\caption{\stepcounter{captionsnum}\oldcaption}
+
+\newtotcounter{bibitemnum}
+\def\oldbibitem{} \let\oldbibitem=\bibitem
+\def\bibitem{\stepcounter{bibitemnum}\oldbibitem}
+
+\newtotcounter{appsnum}
+\setcounter{appsnum}{1}
+\providecommand{\appendixname}{}
+\renewcommand{\appendixname}{ПРИЛОЖЕНИЕ}
+\newcommand{\theappendix}{\Alph{appsnum}}
+\newcommand{\appchapter}[1]{%
+\stepcounter{appsnum}\chapter*{\appendixname~\theappendix.~#1}%
+}
+
 \begin{document}
-\newcounter{fakebibcounter}
-\newcommand\fakebibitem[1]{\stepcounter{fakebibcounter}\bibitem{bibitem:\arabic{fakebibcounter}}}
+
+
 \clubpenalty=3000
 \widowpenalty=3000
 
 \parskip=0pt plus 0.3pt
 
 \pagestyle{plain}
-\renewcommand{\bibname}{ПРИЛОЖЕНИЕ А. Список использованных источников}
+\renewcommand{\bibname}{\appendixname~А.~Список использованных источников}
 \setmainfont{Brill}
 \renewcommand{\chaptername}{ГЛАВА}
 \newcommand{\capfont}{\Large\sffamily\sfcpshape\bfseries}
@@ -128,7 +145,7 @@
     \textbf{РЕФЕРАТ}
   \end{center}
 
-Отчет \pageref{LastPage}~с., \ref{LastFig}~рис., \cite{lastcite}~источников, 4 прил.
+Отчет \pageref{LastPage}~с., \total{captionsnum}~рис., \total{bibitemnum}~источников, \total{appsnum}~прил.
 
 Анализ больших объемов данных, информационные технологии и системы,
 распределённые информационно-вычислительные ресурсы, экоинформатика,
@@ -2257,7 +2274,7 @@ cytoskeleton with forming silica in diatoms: control over patterning on
 the meso- and micro-scale. PLoS ONE 5:e14300.
 \end{thebibliography}
 
-\chapter{ПРИЛОЖЕНИЕ Б. Публикации по теме проекта за \theyear{}~год}
+\appchapter{Публикации по теме проекта за \theyear{}~год}
 \label{chap:publ}
 \begin{enumerate}
 \item
@@ -2348,7 +2365,7 @@ the meso- and micro-scale. PLoS ONE 5:e14300.
   ~\href{https://elibrary.ru/query_results.asp}{{https://elibrary.ru/query\_results.asp}}
 \end{enumerate}
 
-\chapter*{ПРИЛОЖЕНИЕ В. Информация о количестве статей в виде таблицы}
+\appchapter{Информация о количестве статей в виде таблицы}
 
 \begin{longtable}[]{@{}lll@{}}
 \toprule
@@ -2363,7 +2380,7 @@ the meso- and micro-scale. PLoS ONE 5:e14300.
 \bottomrule
 \end{longtable}
 
-\chapter*{ПРИЛОЖЕНИЕ Г. Этапы выполнения проекта}
+\appchapter{Этапы выполнения проекта}
 
 \toprule
 \paragraph{Этап 1. (\theyear~г.).}
@@ -2418,7 +2435,7 @@ the meso- and micro-scale. PLoS ONE 5:e14300.
 \bottomrule
 
 
-\chapter*{ПРИЛОЖЕНИЕ Д. Командировки}
+\appchapter{Командировки}
 \label{chap:comm}
 
 \end{document}
