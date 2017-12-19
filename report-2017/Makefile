@@ -1,11 +1,8 @@
 .PHONY: run  convert pics commit
 
-TARGET=book
+TARGET=report-pre-2017
 
-run: book.pdf
-
-test:
-	echo "Test 3"
+run: $(TARGET).pdf
 
 clean:
 	latexmk -C $(TARGET).tex
