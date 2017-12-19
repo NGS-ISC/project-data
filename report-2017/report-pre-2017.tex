@@ -1,3 +1,48 @@
+%\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+%\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[a4paper,12pt,openany,final]{extreport}
+\usepackage[times,fancytop,firamono,cpcaption,microtyping]{subook}
+\usepackage{booktabs}
+\date{}
+% \hypersetup{
+%     bookmarks=true,         % show bookmarks bar?
+%     unicode=true,           % non-Latin characters in Acrobat’s bookmarks
+%     pdftoolbar=true,        % show Acrobat’s toolbar?
+%     pdfmenubar=true,        % show Acrobat’s menu?
+%     pdffitwindow=false,     % window fit to page when opened
+%     pdfstartview={FitH},    % fits the width of the page to the window
+%     pdftitle={Компьютерные науки, часть 4},    % title
+%     pdfauthor={Евгений Александрович Черкашин},     % author
+%     pdfsubject={Методическое пособие},   % subject of the document
+%     pdfcreator={EMACS-24.4:AuCTeX},   % creator of the document
+%     pdfproducer={LuaLaTeX}, % producer of the document
+%     pdfkeywords={Искусственный интеллект} {Логическое
+%       программирование} {Планирование действий} {Удовлетворение
+%       ограничений} {Компьютерная алгебра} {Принцип максимума} {Оптимальное управление}, % list of keywords
+%     pdfnewwindow=true,      % links in new window
+%     colorlinks=true,       % false: boxed links; true: colored links
+%     linkcolor=[rgb]{0 0.4 0.1},          % color of internal links (black)
+%     citecolor=blue,        % color of links to bibliography
+%     filecolor=black,      % color of file links
+%     urlcolor=[rgb]{0.3 0.0 0.3}           % color of external links
+%   }
+
+\clubpenalty=3000
+\widowpenalty=3000
+
+\parskip=0pt plus 0.3pt
+\renewcommand{\chaptername}{} % for ISU Handbooks
+\renewcommand{\refname}{Рекомендуемая литература} % ... also
+\renewcommand{\bibname}{\refname}
+
+\begin{document}
+% \setmainfont{Brill}
+
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{center}
+
 \textbf{Федеральное государственное бюджетное учреждение науки}
 
 \textbf{Иркутский научный центр}
@@ -43,19 +88,24 @@ Sequencing -- Big Data) для решения вопросов экологии}
 г. Иркутск
 
 2017 г.
+\end{center}
+\end{titlepage}
 
-\begin{longtable}[]{@{}l@{}}
-\toprule
-\begin{minipage}[b]{0.97\columnwidth}\raggedright
-\textbf{РЕФЕРАТ}
+\begin{titlepage}
+  \thispagestyle{empty}
+  \begin{center}
+    \textbf{РЕФЕРАТ}
+  \end{center}
 
 Отчет 44 с., 20 рис., 75 источников, 4 прил.
 
-анализ больших объемов данных, информационные технологии и системы,
+Анализ больших объемов данных, информационные технологии и системы,
 распределённые информационно-вычислительные ресурсы, экоинформатика,
 базы данных и знаний, водные экосистемы, секвенирование нового
 поколения, микробиом, корреляционные сети
-
+\end{titlepage}
+\begin{titlepage}
+  \thispagestyle{empty}
 СПИСОК ОСНОВНЫХ ИСПОЛНИТЕЛЕЙ
 
 Научные руководители части 4.1.2:
@@ -120,44 +170,11 @@ Sequencing -- Big Data) для решения вопросов экологии}
 Разделы
 
 б/с, программист подпись, дата
-
-СОДЕРЖАНИЕ
-
-\begin{longtable}[]{@{}lll@{}}
-\toprule
-ВВЕДЕНИЕ & &\tabularnewline
-Глава 1 & &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-& &\tabularnewline
-\bottomrule
-\end{longtable}\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\tabularnewline
-\bottomrule
-\end{longtable}
-
+\end{titlepage}
+\begin{titlepage}
+\tableofcontents{}
+\end{titlepage}
+\thispagestyle{empty}
 Цели и задачи проекта
 
 \begin{longtable}[]{@{}l@{}}
@@ -203,6 +220,7 @@ Sequencing -- Big Data) для решения вопросов экологии}
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
+\clearpage{}
 
 \textbf{ВВЕДЕНИЕ}
 
@@ -2362,3 +2380,4 @@ the meso- and micro-scale. PLoS ONE 5:e14300.
 ПРИЛОЖЕНИЕ Д
 
 Командировки
+\end{document}
