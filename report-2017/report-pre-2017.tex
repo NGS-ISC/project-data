@@ -157,16 +157,23 @@
     {\capfont Список основных исполнителей}
     \vspace{1em}
 
-  {\capfont\normalsize Научные руководители части 4.1.2}
-  \vspace{2em}
-  \begin{tabular*}{\textwidth}{@{}p{0.4\textwidth}p{4cm}@{\extracolsep{\fill}}l@{}}\raggedright
-Лихошвай Е.В., д.б.н., проф.,
-    зав. отд. Ультраструктуры клетки ЛИН СО РАН&
+    \newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+    \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+    \newcommand{\BA}[1]{%
+      \begin{minipage}[b]{0.4\textwidth}
+        #1
+      \end{minipage}
+    }
+
+  {\capfont\normalsize Научные руководители части 4.1.2\\[1em]}
+  \begin{tabular*}{\textwidth}{@{}l@{\hspace{3em}}p{4cm}@{\extracolsep{\fill}}l@{}}\raggedright
+\BA{Лихошвай Е.В., д.б.н., проф.,
+    зав. отд. Ультраструктуры клетки ЛИН СО РАН}&
 
     & Разделы~\ref{chap:1}--\ref{chap:9}\\\cline{2-2}
-\raggedright
+\raggedright\BA{\T
 Земская Т.И., д.б.н.,
-зав. лаб. Микробиологии углеводородов ЛИН СО РАН & & Разделы~\ref{chap:1}, \ref{chap:4}\\\cline{2-2}
+зав. лаб. Микробиологии углеводородов ЛИН СО РАН}& & Разделы~\ref{chap:1}, \ref{chap:4}\\\cline{2-2}
   \end{tabular*}
 
 \end{center}
