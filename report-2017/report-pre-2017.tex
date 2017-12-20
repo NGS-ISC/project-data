@@ -60,7 +60,7 @@
 \setcounter{appsnum}{1}
 \providecommand{\appendixname}{}
 \renewcommand{\appendixname}{ПРИЛОЖЕНИЕ}
-\newcommand{\theappendix}{\Roman{appsnum}}
+\newcommand{\theappendix}{\Asbuk{appsnum}}
 \newcommand{\appchapter}[1]{%
 \stepcounter{appsnum}\chapter*{\appendixname~\theappendix.~#1}%
 }
@@ -80,6 +80,12 @@
     #1
   \end{minipage}
 }
+\newcommand{\BC}[2]{%
+  \begin{minipage}[c]{#1}
+    \raggedright\T
+    #2
+  \end{minipage}
+}
 
 
 \begin{document}
@@ -91,7 +97,7 @@
 \parskip=0pt plus 0.3pt
 
 \pagestyle{plain}
-\renewcommand{\bibname}{\appendixname~I.~Список использованных источников}
+\renewcommand{\bibname}{\appendixname~А.~Список использованных источников}
 %\setmainfont{Calibri}
 \renewcommand{\chaptername}{ГЛАВА}
 \newcommand{\capfont}{\Large\sffamily\sfcpshape\bfseries}
@@ -477,57 +483,62 @@ minuta; в -- Stephanodiscus meyeri; г -- мелкая центрическая
 \caption{Количество гетеротрофных бактерий (КОЕ/мл), культивируемых на
 среде РПА/10, на станции Листвянка-Танхой в мае-июле и сентябре 2017~г.}\label{table:2}
 
-\begin{longtable}[]{@{}lll@{}}
-\toprule
-Дата отбора проб & Глубины, м & Количество КОЕ/мл, среднее для двух
-повторов\tabularnewline
-\midrule
-\endhead
-29.03.2017 & нижняя граница льда & 21\tabularnewline
-& 0 & 19,7\tabularnewline
-& 5 & 7\tabularnewline
-& 10 & 9,5\tabularnewline
-& 15 & 7,7\tabularnewline
-& 20 & 5,7\tabularnewline
-& 25 & 8\tabularnewline
-12.04.2017 & нижняя граница льда & 267,3\tabularnewline
-& 0 & 1,3\tabularnewline
-& 5 & 1,7\tabularnewline
-& 10 & 5,3\tabularnewline
-& 15 & 5\tabularnewline
-& 20 & 2,7\tabularnewline
-& 25 & 7,3\tabularnewline
-27.05.17 & 0 & 60\tabularnewline
-& 5 & 146,5\tabularnewline
-& 10 & 650\tabularnewline
-& 15 & 205\tabularnewline
-& 20 & 139\tabularnewline
-& 25 & 10,5\tabularnewline
-6.06.17 & 0 & 324,5\tabularnewline
-& 5 & 706\tabularnewline
-& 10 & 1030,5\tabularnewline
-& 15 & 901,5\tabularnewline
-& 20 & 1930\tabularnewline
-& 25 & 845,5\tabularnewline
-10.07.17 & 0 & 2\tabularnewline
-& 5 & 90,5\tabularnewline
-& 10 & 115\tabularnewline
-& 15 & 82,5\tabularnewline
-& 25 & 59,5\tabularnewline
-3.09.17 & 0 & 67\tabularnewline
-& 5 & 17\tabularnewline
-& 10 & 29,5\tabularnewline
+{\tt\begin{tabular*}{\textwidth}{|c|l|@{\extracolsep{\fill}}r|}
+\hline
+\rm Дата отбора проб & \BC{4cm}{\centering\rm Глубины, м} & \BC{0.45\textwidth}{\rm\centering Количество КОЕ/мл, среднее для двух
+повторов}\\
+\hline
+29.03.2017 & \rm нижняя граница льда & 21,00\tabularnewline
+& 0 & 19,70\tabularnewline
+& 5 & 7,00\tabularnewline
+& 10 & 9,50\tabularnewline
+& 15 & 7,70\tabularnewline
+& 20 & 5,70\tabularnewline
+  & 25 & 8,00\tabularnewline
+         \hline
+12.04.2017 & \rm нижняя граница льда & 267,30\tabularnewline
+& 0 & 1,30\tabularnewline
+& 5 & 1,70\tabularnewline
+& 10 & 5,30\tabularnewline
+& 15 & 5,00\tabularnewline
+& 20 & 2,70\tabularnewline
+  & 25 & 7,30\tabularnewline
+         \hline
+27.05.2017 & 0 & 60,00\tabularnewline
+& 5 & 146,50\tabularnewline
+& 10 & 650,00\tabularnewline
+& 15 & 205,00\tabularnewline
+& 20 & 139,00\tabularnewline
+& 25 & 10,50\tabularnewline
+         \hline
+06.06.2017 & 0 & 324,50\tabularnewline
+& 5 & 706,00\tabularnewline
+& 10 & 1030,50\tabularnewline
+& 15 & 901,50\tabularnewline
+& 20 & 1930,00\tabularnewline
+& 25 & 845,50\tabularnewline
+         \hline
+10.07.2017 & 0 & 2,00\tabularnewline
+& 5 & 90,50\tabularnewline
+& 10 & 115,00\tabularnewline
+& 15 & 82,50\tabularnewline
+& 25 & 59,50\tabularnewline
+         \hline
+03.09.2017 & 0 & 67,00\tabularnewline
+& 5 & 17,00\tabularnewline
+& 10 & 29,50\tabularnewline
 & 15 & 293,55\tabularnewline
-& 20 & 411,5\tabularnewline
-& 25 & 158,5\tabularnewline
-14.09.17 & 0 & 11\tabularnewline
-& 5 & 24\tabularnewline
-& 10 & 175,5\tabularnewline
-& 15 & 161\tabularnewline
-& 20 & 162\tabularnewline
-& 25 & 303,5\tabularnewline
-\bottomrule
-\end{longtable}
+& 20 & 411,50\tabularnewline
+& 25 & 158,50\tabularnewline
+         \hline
+14.09.2017 & 0 & 11,00\tabularnewline
+& 5 & 24,00\tabularnewline
+& 10 & 175,50\tabularnewline
+& 15 & 161,00\tabularnewline
+& 20 & 162,00\tabularnewline
+& 25 & 303,50\tabularnewline
+\hline
+\end{tabular*}}
 \end{table}
 
 В интегральных пробах воды, отобранных из разных районов в период с 27
@@ -2090,6 +2101,21 @@ Model Studio реализуется при помощи ряда систем п
 исследований. Разработанные алгоритмы опробованы на задачах, носящий
 технический характер, т.е. направленных на тестирование алгоритмов и
 систем приложения.
+
+\chapter*{Заключение}
+\label{chap:concl}
+
+% Заключение должно содержать:
+% - краткие выводы по результатам НИР в целом;
+% - оценку полноты решений поставленных задач по НИР в целом;
+% - рекомендации по конкретному использованию результатов НИР по НИР в целом;
+% - оценку научного уровня выполненной НИР в целом в сравнении с лучшими достижениями в данной области.
+
+... про данные и методологию их сбора
+
+С целью поддержки процесса исследований начата разработка программных технологий автоматизации процесса хранения информации и обеспечения к ней эффективного интегрированного централизованного доступа на различных этапах анализа данных.  Разрабатываемые ресурсы соответствуют современным технологиям облачного хранения данных.  Существующие модели процессов обработки и анализа данных натурных исследований и экспериментов проанализированы, и разработаны соответствующие модели информационных потоков.  Полученные модели представляются в виде визуальных образов, позволяющих исследователям"=предметникам участвовать в проектировании процедур обработки, анализа и интерпретации данных и результатов.
+
+Таким образом, результаты, полученные в проекте в \thisyear{} представляют собой реализацию современной метеорологии исследований водоемов, широко используемых в мировой практике проведения научных исследований, но примененных к новому объекту исследования -- оз.~Байкал.  Полученные результаты носят мультидисциплинарный характер и на этапе 2017 года охватывают стадии сбора, обработки информации, а также совершенствование методов анализа полученной информации.
 
 \begin{thebibliography}{99}
 \bibitem{}
