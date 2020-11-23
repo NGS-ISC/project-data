@@ -1,0 +1,16 @@
+#EXTM3U
+#EXT-X-VERSION:6
+#EXT-X-TARGETDURATION:6
+#EXT-X-MEDIA-SEQUENCE:288313
+#EXTINF:4.99229,
+https://hls-01-storage.emgsound.ru/13/96/out288313.ts
+#EXTINF:4.99229,
+https://hls-01-storage.emgsound.ru/13/96/out288314.ts
+#EXTINF:4.99229,
+https://hls-01-storage.emgsound.ru/13/96/out288315.ts
+#EXTINF:4.99229,
+https://hls-01-storage.emgsound.ru/13/96/out288316.ts
+#EXTINF:4.99229,
+https://hls-01-storage.emgsound.ru/13/96/out288317.ts
+#EXTINF:4.99229,
+https://hls-01-storage.emgsound.ru/13/96/out288318.ts
